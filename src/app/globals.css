@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Slate-blue palette — light */
+  --color-bg-start: #B8C4DC;
+  --color-bg-mid: #D0D8EA;
+  --color-bg-end: #C2CCE0;
+  --color-surface: rgba(255, 255, 255, 0.4);
+  --color-surface-alt: rgba(255, 255, 255, 0.3);
+  --color-bubble-user: rgba(74, 94, 138, 0.8);
+  --color-bubble-ai: rgba(255, 255, 255, 0.5);
+  --color-accent: #4A5E8A;
+  --color-text-primary: #1A1F2E;
+  --color-text-secondary: #5a6280;
+  --color-text-on-user: #ffffff;
+  --color-text-on-ai: #1A1F2E;
+  --color-input-bg: rgba(255, 255, 255, 0.4);
+  --color-input-border: rgba(74, 94, 138, 0.15);
+  --color-divider: rgba(74, 94, 138, 0.1);
+  --color-glass: rgba(255, 255, 255, 0.3);
+  --color-glass-border: rgba(255, 255, 255, 0.5);
+  --blur-strength: 20px;
+  --blur-heavy: 28px;
+}
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+  --color-bg-start: #0a0e15;
+  --color-bg-mid: #111827;
+  --color-bg-end: #0d1220;
+  --color-surface: rgba(30, 37, 53, 0.45);
+  --color-surface-alt: rgba(26, 31, 46, 0.5);
+  --color-bubble-user: rgba(61, 78, 122, 0.7);
+  --color-bubble-ai: rgba(30, 37, 53, 0.55);
+  --color-accent: #6B8ACD;
+  --color-text-primary: #E2E6EF;
+  --color-text-secondary: #8891A8;
+  --color-text-on-user: #ffffff;
+  --color-text-on-ai: #E2E6EF;
+  --color-input-bg: rgba(30, 37, 53, 0.4);
+  --color-input-border: rgba(107, 138, 205, 0.15);
+  --color-divider: rgba(107, 138, 205, 0.08);
+  --color-glass: rgba(255, 255, 255, 0.04);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --blur-strength: 16px;
+  --blur-heavy: 24px;
+}
+
+body {
+  background: linear-gradient(135deg, var(--color-bg-start), var(--color-bg-mid), var(--color-bg-end));
+  color: var(--color-text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* Glass utility classes */
+.glass {
+  background: var(--color-glass);
+  backdrop-filter: blur(var(--blur-strength));
+  -webkit-backdrop-filter: blur(var(--blur-strength));
+  border: 1px solid var(--color-glass-border);
+}
+
+.glass-heavy {
+  background: var(--color-glass);
+  backdrop-filter: blur(var(--blur-heavy));
+  -webkit-backdrop-filter: blur(var(--blur-heavy));
+  border: 1px solid var(--color-glass-border);
+}
+
+/* Animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fade-overlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out both;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.25s ease-out both;
+}
+
+.animate-fade-overlay {
+  animation: fade-overlay 0.2s ease-out both;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out both;
+}
