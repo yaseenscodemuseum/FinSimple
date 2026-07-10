@@ -208,16 +208,6 @@ src/
 
 ### Vercel (Recommended)
 
-1. Push your repo to GitHub
-2. Import the project on [Vercel](https://vercel.com/new)
-3. Add your environment variables in Vercel's dashboard:
-   - Your chosen AI provider key (`OPENROUTER_API_KEY`, `OPENAI_API_KEY`, etc.)
-   - `UPSTASH_REDIS_REST_URL`
-   - `UPSTASH_REDIS_REST_TOKEN`
-4. Deploy
-
-### Other Platforms
-
 ```bash
 npm run build
 npm start
@@ -237,8 +227,12 @@ Make sure your platform supports Node.js 18+ and has the environment variables s
 
 This project is open source under the [MIT License](LICENSE).
 
-## Contact
+## Credits
 
-**Yaseen** - [yaseenabdulaziz18@gmail.com](mailto:yaseenabdulaziz18@gmail.com)
+If you use this repo, please credit me or send me a photo of you using it on one of my socials — it'd make me really happy to see people appreciating my work.
 
-Project Link: [https://github.com/yaseenabdulaziz18/FinSimple](https://github.com/yaseenabdulaziz18/FinSimple)
+- **Website**: [yaseensportfolio.vercel.app](https://yaseensportfolio.vercel.app)
+- **Instagram**: [@yaleftonseen](https://www.instagram.com/yaleftonseen/)
+- **Email**: yaseenabdulaziz18@gmail.com
+- **LinkedIn**: [Mohammad Yaseen Abdul Aziz](https://www.linkedin.com/in/mohammad-yaseen-abdul-aziz/)
+- **GitHub**: [yaseenscodemuseum](https://github.com/yaseenscodemuseum)
